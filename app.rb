@@ -2,14 +2,15 @@ require 'fileutils'
 require 'sinatra/cross_origin'
 require 'faraday'
 
+
 #todo: https://github.com/britg/sinatra-cross_origin
 
 $blobby_port = ENV['BLOBBY_PORT_4000_TCP_PORT']
 $blobby_addr = ENV['BLOBBY_PORT_4000_TCP_ADDR']
 
 class DocTrack < Sinatra::Base
-  reset!
-  use Rack::Reloader
+#  reset!
+#  use Rack::Reloader
   
   before do
      content_type  = 'text/plain'
