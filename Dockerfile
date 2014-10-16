@@ -4,7 +4,7 @@ ADD . /srv/www
 RUN cd /srv/www; bundle install --deployment --without test development
 
 # ADD_NAME doctrack
-## LINK_SERVICE blobby
+# LINK_SERVICE blobby
 
 EXPOSE 4000
 CMD ["/usr/local/bin/foreman","start","-d","/srv/www"]
