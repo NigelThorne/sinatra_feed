@@ -1,0 +1,46 @@
+p 
+	b author         : 
+	= @recipe.author         
+p 
+	b cook_time      : 
+	= @recipe.cook_time      
+p 
+	b description    : 
+	= @recipe.description    
+p 
+	b image_url      : 
+	= @recipe.image_url      
+p
+	b Ingredients    : 
+	table
+		tr
+			th Amount
+			th Unit
+			th Ingredient
+		- for ingredient in @ingredients do
+			tr
+				td.amount = ingredient.amount
+				td.unit = ingredient.unit
+				td.ingredient = ingredient.ingredient	
+p 
+	b instructions   : 
+	== "</br>" +@recipe.instructions.split(". ").join(". </br>")   
+p 
+	b name           : 
+	= @recipe.name           
+p 
+	b prep_time      : 
+	= @recipe.prep_time      
+p 
+	b published_date : 
+	= @recipe.published_date 
+p 
+	b total_time     : 
+	= @recipe.total_time     
+p 
+	b yield          : 
+	= @recipe.yield
+p 
+	b nutrition          : 
+	= @recipe.nutrition
+

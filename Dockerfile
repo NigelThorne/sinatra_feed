@@ -3,7 +3,6 @@ FROM octohost/ruby-2.0
 ADD . /srv/www
 RUN cd /srv/www; bundle install --deployment --without test development
 
-# ADD_NAME doctrack
 #>> does't work --># LINK_SERVICE blobby
 ENV BLOBBY_PORT_4000_TCP_PORT 80
 ENV BLOBBY_PORT_4000_TCP_ADDR blobby.locallan.link
