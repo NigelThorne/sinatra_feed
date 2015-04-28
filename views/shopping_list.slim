@@ -1,0 +1,15 @@
+p
+	b Ingredients    : 
+	table
+		tr
+			th Amount
+			th Unit
+			th Ingredient
+			th Adjusted
+			- for ingredient in @ingredients do
+				tr
+					td.amount = ingredient.amount
+					td.unit = ingredient.unit
+					td.ingredient = ingredient.ingredient
+					td.adjusted
+						input type="number" value="#{ingredient.amount}" 
