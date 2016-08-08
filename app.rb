@@ -65,8 +65,8 @@ class MyApp < Sinatra::Base
 
   post '/shopping_list' do
     urls = params["recipe_url"].values.reject{|v| v.nil? || v.empty? }
-    @verbose_ingredients = urls.flat_map{|u| ingredients(u) }
-    @grouped_ingredients = @verbose_ingredients.group_by{|i| [i.ingredient, i.unit]}
+    @ingredients_pre_recipe = urls.flat_map{|u| ingredients(u) }
+    @grouped_ingredients = @ingredients_pre_recipe.group_by{|i| [i.ingredient, i.unit]}
     @ingredients = @grouped_ingredients.map{|k,v| OpenStruct.new({ingredient: k[0], unit:k[1], amount:v.inject(0){|a,t| a+t.amount}})}
     slim :shopping_list
   end
