@@ -9,7 +9,7 @@ gem "sass"
 gem "coffee-script"
 
 gem 'foreman'
-gem "sinatra-cross_origin", "~> 0.3.1"
+gem "sinatra-cross_origin", "~> 0.4.0"
 gem "faraday"
 gem "slim"
 
