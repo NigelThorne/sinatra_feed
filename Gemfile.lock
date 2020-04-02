@@ -16,7 +16,7 @@ GEM
     ffi (1.10.0)
     ffi (1.10.0-x64-mingw32)
     ffi (1.10.0-x86-mingw32)
-    foreman (0.87.0)
+    foreman (0.87.1)
     hangry (0.0.13)
       activesupport (~> 3.0)
       iso8601 (~> 0.4.0)
